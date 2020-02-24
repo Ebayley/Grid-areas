@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
+html, body, h3 {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 2em;
+}
+
+header, aside {
+    background-color: rgb(198, 247, 255);
+}
+
+h1, h3 {font-family: 'PT Sans'}
+h1, .tagline {color: rgb(3, 88, 125); }
+
+section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding-bottom: .4em;
+}
+
+
+.nummer {
+    background-color: rgb(3, 88, 125);
+    color: #fff;
+    font-size: 3em;
+    width: 1.2em;
+    text-align: right;
+    padding: .2em;
+}
+
+article {
+    padding: 1em;
+}
+
+section img {
+   max-width: 100%;
+}
+
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside h3 {
+    background-color: rgb(3, 88, 125);
+    padding: 2em;
+    color: #fff;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+    padding: 2em;
+    display: block;
+}
+
+aside a:hover {
+    background-color: rgb(3, 88, 125);
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #eee;
+    padding: 2em;
+    font-size: .9em;
+}
+
+
+@media screen and (min-width: 760px) {
+    
+    .afb {
+        display: block;
+        background-image: url('time2.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: .4em;
+        grid-template-areas: "kop kop"
+        "t1 t2"
+        "t3 t4"
+        "t3 t5"
+        "afb t6"
+        "t7 aside"
+        "t8 aside"
+        "t9 aside"
+        "t10 aside"
+        "voet voet";
+    }
+
+    header {
+        grid-area: kop;
+        margin-bottom: .4em;
+    }
+
+    .routine {grid-area: t1;}
+    .maakAf {grid-area: t2;}
+    .verzamelen {grid-area: t3;}      
+    .agenda {grid-area: t4;}
+    .afb {
+        grid-area: afb;
+        margin-bottom: .4em;
+    }
+    .organiseren {grid-area: t5;}
+    .ad-Hoc {grid-area: t6;}
+    .takenlijst {grid-area: t7;}
+    .acties {grid-area: t8;}
+    .e-mail {grid-area: t9;}
+    .klasblok {grid-area: t10;}
+
+    aside {
+        grid-area: aside;
+        margin-bottom: .4em;
+    }
+
+    footer {grid-area: voet;}
+
+    h1 {font-size: 2.6em;}
+    
+    .verzamelen_article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .verzamelen_article h3 {grid-column: span 2;}
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    body {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: .3em;
+        grid-template-areas: "kop kop kop"
+        "t1 t2 afb"
+        "t3 t4 afb"
+        "t3 t5 afb"
+        "aside t6 t6"
+        "aside t7 t8"
+        "aside t9 t10"
+        "aside voet voet";
+    }
+
+    header {
+        grid-area: kop;
+        margin-bottom: .4em;        
+    }
+    
+    .routine {grid-area: t1;}
+    .maakAf {grid-area: t2;}
+    .verzamelen {grid-area: t3;}    
+    .agenda {grid-area: t4;}
+    .afb {
+        grid-area: afb;
+        margin-bottom: .4em;
+    }
+    .organiseren {grid-area: t5;}
+    .ad-Hoc {grid-area: t6;}
+    .takenlijst {grid-area: t7;}
+    .acties {grid-area: t8;}
+    .e-mail {grid-area: t9;}
+    .klasblok {grid-area: t10;}
+
+    aside {
+        grid-area: aside;
+        margin-bottom: .4em;
+    }
+
+    footer {grid-area: voet;}
+
+    .afb {
+        background-image: url('time1.jpg');
+    }
+
+}
